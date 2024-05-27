@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+      * {
+        font-family: Nunito, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu {
+        margin: 0;
+        padding: 0;
+        width: 260px;
+        background-color: #f9f9f9;
+        position: fixed;
+        height: 100%;
+      }
+
+      .newchat {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin: 10px;
+      }
+
+      .newchat:hover {
+        background-color: #d0d0d0;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .margin {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        margin: 5px;
+        box-sizing: content-box;
+      }
+
+      .margin p {
+        margin: 0;
+      }
+      .logo img,
+      .logo {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+      }
+
+      .logo {
+        background-color: rgb(255, 255, 255);
+        border-radius: 100%;
+        padding: 2px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      .newchat p {
+        padding: 5px;
+        font-weight: 800;
+      }
+
+      .login {
+        position: absolute;
+        bottom: 0;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .login h4 {
+        font-weight: 800;
+        margin-top: 2px;
+        margin-bottom: 2px;
+      }
+
+      .login p {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        color: #9b9b9b;
+      }
+
+      .textlogin {
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+      .buttons,
+      button {
+        display: flex;
+        width: 95%;
+        align-items: stretch;
+        border-color: transparent;
+        border-radius: 0.5rem;
+        border-width: 1px;
+        flex-direction: column;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.25rem;
+      }
+
+      button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 0.5rem 0.75rem;
+        cursor: pointer;
+      }
+      .btn-primary {
+        background-color: rgb(16, 163, 127);
+        color: white;
+      }
+
+      .btn-secondary {
+        background-color: #fff;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+      }
+
+      .bg {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 260px;
+        width: calc(100% - 260px);
+        height: 100%;
+      }
+
+      .bg h4 {
+        padding: 5px;
+        margin-top: 0;
+        font-size: 1.155rem;
+        line-height: 1.75rem;
+      }
+
+      .bg .v {
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        align-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: fit-content;
+        height: fit-content;
+      }
+
+      .v:hover {
+        background-color: #d0d0d0;
+        border-radius: 10px;
+      }
+      .bg .vdim {
+        margin-left: 0;
+        color: #9b9b9b;
+      }
+
+      .v h4,
+      span {
+        padding: 2.5px;
+        margin-bottom: 0;
+      }
+
+      .gpt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .logogpt,
+      .logogpt img {
+        width: 32px;
+      }
+
+      .logogpt img {
+        border-radius: 100%;
+        padding: 5px;
+        border: 1px solid rgb(0, 0, 0, 0.5);
+      }
+      .gpt h2 {
+        margin: 2px;
+        text-align: center;
+      }
+
+      .msg {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        bottom: 2%;
+        width: 100%;
+      }
+
+      .msgbox {
+        width: 50%;
+        padding: 14px 28px;
+        border-radius: 10px;
+        border: none;
+        border: 1px solid;
+      }
+
+      .ok {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 23.5%;
+        bottom: 2px;
+        background-color: rgb(50, 50, 50);
+        width: 32px;
+        height: 32px;
+        transition: 0.25s;
+      }
+
+      .ok:hover {
+        transform: rotate(-0.25turn);
+      }
+
+      .ok:active {
+        transition: none;
+        bottom: 0.5px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        * {
+          position: relative;
+        }
+        .menu {
+          display: none;
+        }
+        .bg {
+          position: fixed;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="newchat">
+        <div class="margin">
+          <div class="logo">
+            <img src="./chatgpt.svg" alt="" />
+          </div>
+          <a href=""><p>Novo chat</p></a>
+        </div>
+      </div>
+      <div class="login">
+        <div class="textlogin">
+          <h4>Entrar ou cadastrar</h4>
+          <p>
+            Tenha respostas mais inteligentes, faça upload de arquivos, fotos,
+            imagens e muito mais.
+          </p>
+        </div>
+        <div class="buttons">
+          <button class="btn-primary">Entrar</button>
+          <button class="btn-secondary">Cadastrar</button>
+        </div>
+      </div>
+    </nav>
+    <div class="bg">
+      <div class="v">
+        <h4>ChatGPT</h4>
+        <h4 class="vdim">3.5</h4>
+        <span class="material-symbols-outlined"> stat_minus_1 </span>
+      </div>
+      <div class="gpt">
+        <div class="logogpt">
+          <img src="./chatgpt.svg" alt="" />
+        </div>
+        <h2>Como posso ajudar hoje?</h2>
+        <div class="msg">
+          <input
+            class="msgbox"
+            type="text"
+            name=""
+            id=""
+            placeholder="Mensagem ChatGPT"
+          />
+          <button class="ok">
+            <img src="./up.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
